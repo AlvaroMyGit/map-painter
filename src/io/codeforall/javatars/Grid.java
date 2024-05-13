@@ -15,14 +15,16 @@ public class Grid {
     protected Cursor cursor;
     protected MyKeyboard myKeyboard;
 
+    protected FileHelper fileHelper;
+
 
     public Grid(int col, int row) {
         this.row = row;
         this.col = col;
         rect = new MyRectangle[col][row];
-        cursor = new Cursor(this, rect);
-        myKeyboard = new MyKeyboard(cursor);
-
+        cursor = new Cursor(this);
+        myKeyboard = new MyKeyboard(this, cursor, new FileHelper(this));
+        start();
     }
 
     protected void start() {
@@ -45,5 +47,29 @@ public class Grid {
         }
     }
 
+    public void clear() {
+        for (int i = 0; i < rect.length; i++) {
+            for (int j = 0; j < rect.length; j++) {
+                if (rect[i][j].isPainted()){
+                    rect[i][j].rectangleDelete();
+                }
+            }
+        }
+    }
 
+    public MyRectangle[][] getRect() {
+        return rect;
+    }
+
+    public int getRow() {
+        return row;
+    }
+
+    public int getCol() {
+        return col;
+    }
+
+    public Cursor getCursor() {
+        return cursor;
+    }
 }

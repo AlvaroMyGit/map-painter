@@ -10,10 +10,14 @@ public class Cursor {
     protected MyRectangle[][] rect;
     protected MyKeyboard myKeyboard;
 
-    public Cursor(Grid myGrid, MyRectangle[][] rect) {
-        myKeyboard = new MyKeyboard(this);
+    protected Color color;
+
+    protected FileHelper fileHelper;
+
+    public Cursor(Grid myGrid) {
         this.myGrid = myGrid;
-        this.rect = rect;
+        this.rect = myGrid.getRect();
+        this.color = Color.BLACK;
     }
 
     protected void drawCursor() {
@@ -47,14 +51,26 @@ public class Cursor {
     }
 
     protected void paintErase() {
-        if (!rect[cursor.getY() / myGrid.CELL_SIZE][cursor.getX() / myGrid.CELL_SIZE].isPainted()) {
-            rect[cursor.getY() / myGrid.CELL_SIZE][cursor.getX() / myGrid.CELL_SIZE].rectangleFill();
-            rect[cursor.getY() / myGrid.CELL_SIZE][cursor.getX() / myGrid.CELL_SIZE].setPainted(true);
 
-        } else if (rect[cursor.getY() / myGrid.CELL_SIZE][cursor.getX() / myGrid.CELL_SIZE].isPainted()) {
-            rect[cursor.getY() / myGrid.CELL_SIZE][cursor.getX() / myGrid.CELL_SIZE].rectangleDelete();
-            rect[cursor.getY() / myGrid.CELL_SIZE][cursor.getX() / myGrid.CELL_SIZE].setPainted(false);
-        }
+        MyRectangle selectedRectangle = rect[cursor.getY() / myGrid.CELL_SIZE][cursor.getX() / myGrid.CELL_SIZE];
+
+        if (!selectedRectangle.isPainted()) {
+            selectedRectangle.rectangleFill(color);
+            selectedRectangle.setPainted(true);
+
+        } else {
+            selectedRectangle.rectangleDelete();
+            selectedRectangle.setPainted(false);
+            }
+
+    }
+
+    public void setColor(Color color) {
+        this.color = color;
+    }
+
+    public Rectangle getCursor() {
+        return cursor;
     }
 }
 
