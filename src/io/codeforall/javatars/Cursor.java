@@ -22,7 +22,7 @@ public class Cursor {
         cursor.fill();
     }
     protected void reDrawCursor() {
-        cursor = new Rectangle(myGrid.PADDING, myGrid.PADDING, myGrid.CELL_SIZE, myGrid.CELL_SIZE);
+        cursor = new Rectangle(cursor.getX(), cursor.getY(), myGrid.CELL_SIZE, myGrid.CELL_SIZE);
         cursor.setColor(getColor());
         cursor.fill();
     }
