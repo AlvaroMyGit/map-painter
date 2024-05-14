@@ -9,14 +9,10 @@ public class Grid {
     protected final int PADDING = 10;
 
     protected int row;
-
     protected int col;
     protected MyRectangle[][] rect;
     protected Cursor cursor;
     protected MyKeyboard myKeyboard;
-
-    protected FileHelper fileHelper;
-
 
     public Grid(int col, int row) {
         this.row = row;
@@ -69,7 +65,4 @@ public class Grid {
         return col;
     }
 
-    public Cursor getCursor() {
-        return cursor;
-    }
 }

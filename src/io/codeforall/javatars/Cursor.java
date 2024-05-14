@@ -8,11 +8,7 @@ public class Cursor {
     protected Rectangle cursor;
     protected Grid myGrid;
     protected MyRectangle[][] rect;
-    protected MyKeyboard myKeyboard;
-
     protected Color color;
-
-    protected FileHelper fileHelper;
 
     public Cursor(Grid myGrid) {
         this.myGrid = myGrid;
@@ -22,7 +18,7 @@ public class Cursor {
 
     protected void drawCursor() {
         cursor = new Rectangle(myGrid.PADDING, myGrid.PADDING, myGrid.CELL_SIZE, myGrid.CELL_SIZE);
-        cursor.setColor(Color.BLACK);
+        cursor.setColor(getColor());
         cursor.fill();
     }
 
@@ -55,7 +51,7 @@ public class Cursor {
         MyRectangle selectedRectangle = rect[cursor.getY() / myGrid.CELL_SIZE][cursor.getX() / myGrid.CELL_SIZE];
 
         if (!selectedRectangle.isPainted()) {
-            selectedRectangle.rectangleFill(color);
+            selectedRectangle.rectangleFill(getColor());
             selectedRectangle.setPainted(true);
 
         } else {
@@ -69,8 +65,8 @@ public class Cursor {
         this.color = color;
     }
 
-    public Rectangle getCursor() {
-        return cursor;
+    public Color getColor() {
+        return color;
     }
 }
 

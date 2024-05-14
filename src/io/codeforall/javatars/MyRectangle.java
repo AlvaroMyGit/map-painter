@@ -13,7 +13,6 @@ public class MyRectangle {
 
     protected Color color;
 
-    protected Cursor cursor;
     public MyRectangle(int x,int y,int width,int height) {
         this.rectangle = new Rectangle(x, y, width, height);
     }
@@ -27,6 +26,7 @@ public class MyRectangle {
     }
 
     public void rectangleFill(Color color) {
+        this.color = color;
         rectangle.setColor(color);
         rectangle.fill();
     }

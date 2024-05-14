@@ -171,8 +171,4 @@ public class MyKeyboard implements KeyboardHandler {
             pressed = false;
         }
     }
-
-    public void setFileHelper(FileHelper fileHelper) {
-        this.fileHelper = fileHelper;
-    }
 }
