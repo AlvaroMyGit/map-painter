@@ -41,14 +41,6 @@ public class MyRectangle {
         rectangle.draw();
     }
 
-    public void rectangleSetColor() {
-        rectangle.setColor(Color.RED);
-    }
-
-    public void changeColor(Color color) {
-        this.color = color;
-    }
-
     public Color getColor() {
         return color;
     }

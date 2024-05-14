@@ -1,13 +1,9 @@
 package io.codeforall.javatars;
 
-import org.academiadecodigo.simplegraphics.graphics.Color;
-import org.academiadecodigo.simplegraphics.graphics.Rectangle;
-
 public class Grid {
 
     protected final int CELL_SIZE = 20;
     protected final int PADDING = 10;
-
     protected int row;
     protected int col;
     protected MyRectangle[][] rect;
@@ -22,13 +18,11 @@ public class Grid {
         myKeyboard = new MyKeyboard(this, cursor, new FileHelper(this));
         start();
     }
-
     protected void start() {
         drawGrid();
         cursor.drawCursor();
         myKeyboard.addKeyboard();
     }
-
     protected void drawGrid() {
         int x = PADDING;
         int y = PADDING;
@@ -42,7 +36,6 @@ public class Grid {
             y += CELL_SIZE;
         }
     }
-
     public void clear() {
         for (int i = 0; i < rect.length; i++) {
             for (int j = 0; j < rect.length; j++) {
@@ -52,17 +45,13 @@ public class Grid {
             }
         }
     }
-
     public MyRectangle[][] getRect() {
         return rect;
     }
-
     public int getRow() {
         return row;
     }
-
     public int getCol() {
         return col;
     }
-
 }

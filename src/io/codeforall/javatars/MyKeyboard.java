@@ -160,8 +160,6 @@ public class MyKeyboard implements KeyboardHandler {
             case 51 -> cursor.setColor(Color.RED);
         }
     }
-
-
     @Override
     public void keyReleased(KeyboardEvent keyboardEvent) {
 

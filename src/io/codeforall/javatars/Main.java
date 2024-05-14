@@ -7,7 +7,5 @@ public class Main {
 
         // Create a Grid object
         Grid myGrid = new Grid(40, 40);
-
-
     }
 }
