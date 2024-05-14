@@ -21,6 +21,11 @@ public class Cursor {
         cursor.setColor(getColor());
         cursor.fill();
     }
+    protected void reDrawCursor() {
+        cursor = new Rectangle(myGrid.PADDING, myGrid.PADDING, myGrid.CELL_SIZE, myGrid.CELL_SIZE);
+        cursor.setColor(getColor());
+        cursor.fill();
+    }
 
     protected void moveUp() {
         if (cursor.getY() > myGrid.PADDING + 1) {
@@ -53,7 +58,6 @@ public class Cursor {
         if (!selectedRectangle.isPainted()) {
             selectedRectangle.rectangleFill(getColor());
             selectedRectangle.setPainted(true);
-
         } else {
             selectedRectangle.rectangleDelete();
             selectedRectangle.setPainted(false);
@@ -63,10 +67,12 @@ public class Cursor {
 
     public void setColor(Color color) {
         this.color = color;
+        cursor.delete();
+        reDrawCursor();
     }
 
     public Color getColor() {
-        return color;
+        return this.color;
     }
 }
 
