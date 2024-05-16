@@ -26,7 +26,7 @@ public class MyRectangle {
     // Returns the value of isPainted, this is the way we check if it is painted or not
     // We use it in the paintErase() to decide if we paint it or if we erase it
     public boolean isPainted() {
-        return isPainted;cmd
+        return isPainted;
     }
 
     // The method we use to paint the squares
