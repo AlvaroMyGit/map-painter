@@ -8,18 +8,19 @@ import java.io.*;
 
 public class FileHelper {
 
-    //private final String FILENAME;
     private final Grid GRID;
     private final int COLS;
     private final int ROWS;
+
 
     public FileHelper(Grid grid) {
         this.GRID = grid;
         this.COLS = grid.getCol();
         this.ROWS = grid.getRow();
-        //this.FILENAME = "src/io/codeforall/javatars/save.txt";
     }
 
+
+    // Saves the current Grid and gives the user the ability to choose the directory and the name of the file
     public void save() throws IOException {
 
         JFileChooser fileChooser = new JFileChooser();
@@ -56,6 +57,7 @@ public class FileHelper {
 
     }
 
+    // Loads a previously saved Grid, the user can navigate to a directory and choose a file
     public void load() throws IOException {
 
         JFileChooser fileChooser = new JFileChooser();

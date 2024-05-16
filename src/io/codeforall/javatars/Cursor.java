@@ -16,11 +16,15 @@ public class Cursor {
         this.color = Color.BLACK;
     }
 
+    // Draws the initial cursor when the program runs in the upper left corner of the grid
     protected void drawCursor() {
         cursor = new Rectangle(myGrid.PADDING, myGrid.PADDING, myGrid.CELL_SIZE, myGrid.CELL_SIZE);
         cursor.setColor(getColor());
         cursor.fill();
     }
+
+    // Method used to redraw the cursor when you change colors while painting
+    // It will spawn in the position of the previous cursor
     protected void reDrawCursor() {
         cursor = new Rectangle(cursor.getX(), cursor.getY(), myGrid.CELL_SIZE, myGrid.CELL_SIZE);
         cursor.setColor(getColor());
@@ -51,6 +55,8 @@ public class Cursor {
         }
     }
 
+    // This method is responsible for painting and erasing painted squares based on the condition if
+    // It is already painted or not
     protected void paintErase() {
 
         MyRectangle selectedRectangle = rect[cursor.getY() / myGrid.CELL_SIZE][cursor.getX() / myGrid.CELL_SIZE];
@@ -58,13 +64,14 @@ public class Cursor {
         if (!selectedRectangle.isPainted()) {
             selectedRectangle.rectangleFill(getColor());
             selectedRectangle.setPainted(true);
-        } else {
-            selectedRectangle.rectangleDelete();
-            selectedRectangle.setPainted(false);
-            }
-
+            return;
+        }
+        selectedRectangle.rectangleDelete();
+        selectedRectangle.setPainted(false);
     }
 
+    // Changes the color of the cursor, after it changes the color deletes the previous cursor/color
+    // And redraws the new one in the position of the previous one
     public void setColor(Color color) {
         this.color = color;
         cursor.delete();

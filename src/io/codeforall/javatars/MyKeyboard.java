@@ -27,6 +27,8 @@ public class MyKeyboard implements KeyboardHandler {
         this.fileHelper = fileHelper;
     }
 
+
+    
     protected void addKeyboard() {
         KeyboardEvent moveRight = new KeyboardEvent();
         moveRight.setKey(KeyboardEvent.KEY_RIGHT);
