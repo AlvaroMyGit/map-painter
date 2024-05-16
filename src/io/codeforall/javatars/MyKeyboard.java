@@ -28,7 +28,7 @@ public class MyKeyboard implements KeyboardHandler {
     }
 
 
-    
+    // Using the library to map the keyboard keys to the corresponding methods
     protected void addKeyboard() {
         KeyboardEvent moveRight = new KeyboardEvent();
         moveRight.setKey(KeyboardEvent.KEY_RIGHT);
@@ -97,6 +97,7 @@ public class MyKeyboard implements KeyboardHandler {
 
     }
 
+    // Triggering the methods that are mapped to their respective keys
     @Override
     public void keyPressed(KeyboardEvent keyboardEvent) {
         int key = keyboardEvent.getKey();
