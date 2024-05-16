@@ -82,5 +82,3 @@ public class Cursor {
         return this.color;
     }
 }
-
-

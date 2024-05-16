@@ -46,6 +46,18 @@ public class FileHelper {
                         outputStream.write(("2,").getBytes());
                     } else if ((GRID.getRect()[j][i].getColor() == Color.RED)) {
                         outputStream.write(("3,").getBytes());
+                    } else if ((GRID.getRect()[j][i].getColor() == Color.GRAY)) {
+                        outputStream.write(("4,").getBytes());
+                    } else if ((GRID.getRect()[j][i].getColor() == Color.CYAN)) {
+                        outputStream.write(("5,").getBytes());
+                    } else if ((GRID.getRect()[j][i].getColor() == Color.MAGENTA)) {
+                        outputStream.write(("6,").getBytes());
+                    } else if ((GRID.getRect()[j][i].getColor() == Color.YELLOW)) {
+                        outputStream.write(("7,").getBytes());
+                    } else if ((GRID.getRect()[j][i].getColor() == Color.PINK)) {
+                        outputStream.write(("8,").getBytes());
+                    } else if ((GRID.getRect()[j][i].getColor() == Color.ORANGE)) {
+                        outputStream.write(("9,").getBytes());
                     } else {
                         outputStream.write(("n,").getBytes());
                     }
@@ -95,6 +107,24 @@ public class FileHelper {
                             break;
                         case '3':
                             GRID.getRect()[col][row].rectangleFill(Color.RED);
+                            break;
+                        case '4':
+                            GRID.getRect()[col][row].rectangleFill(Color.GRAY);
+                            break;
+                        case '5':
+                            GRID.getRect()[col][row].rectangleFill(Color.CYAN);
+                            break;
+                        case '6':
+                            GRID.getRect()[col][row].rectangleFill(Color.MAGENTA);
+                            break;
+                        case '7':
+                            GRID.getRect()[col][row].rectangleFill(Color.YELLOW);
+                            break;
+                        case '8':
+                            GRID.getRect()[col][row].rectangleFill(Color.PINK);
+                            break;
+                        case '9':
+                            GRID.getRect()[col][row].rectangleFill(Color.ORANGE);
                             break;
                         default:
                             GRID.getRect()[col][row].rectangleDelete();

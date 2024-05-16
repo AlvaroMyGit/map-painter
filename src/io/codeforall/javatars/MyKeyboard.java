@@ -65,10 +65,6 @@ public class MyKeyboard implements KeyboardHandler {
         clear.setKeyboardEventType(KeyboardEventType.KEY_PRESSED);
         myKeyboard.addEventListener(clear);
 
-        KeyboardEvent black = new KeyboardEvent();
-        black.setKey(KeyboardEvent.KEY_4);
-        black.setKeyboardEventType(KeyboardEventType.KEY_PRESSED);
-        myKeyboard.addEventListener(black);
 
         KeyboardEvent green = new KeyboardEvent();
         green.setKey(KeyboardEvent.KEY_1);
@@ -85,6 +81,41 @@ public class MyKeyboard implements KeyboardHandler {
         red.setKeyboardEventType(KeyboardEventType.KEY_PRESSED);
         myKeyboard.addEventListener(red);
 
+        KeyboardEvent black = new KeyboardEvent();
+        black.setKey(KeyboardEvent.KEY_4);
+        black.setKeyboardEventType(KeyboardEventType.KEY_PRESSED);
+        myKeyboard.addEventListener(black);
+
+        KeyboardEvent cyan = new KeyboardEvent();
+        cyan.setKey(KeyboardEvent.KEY_5);
+        cyan.setKeyboardEventType(KeyboardEventType.KEY_PRESSED);
+        myKeyboard.addEventListener(cyan);
+
+        KeyboardEvent gray = new KeyboardEvent();
+        gray.setKey(KeyboardEvent.KEY_6);
+        gray.setKeyboardEventType(KeyboardEventType.KEY_PRESSED);
+        myKeyboard.addEventListener(gray);
+
+        KeyboardEvent magenta = new KeyboardEvent();
+        magenta.setKey(KeyboardEvent.KEY_7);
+        magenta.setKeyboardEventType(KeyboardEventType.KEY_PRESSED);
+        myKeyboard.addEventListener(magenta);
+
+        KeyboardEvent yellow = new KeyboardEvent();
+        yellow.setKey(KeyboardEvent.KEY_8);
+        yellow.setKeyboardEventType(KeyboardEventType.KEY_PRESSED);
+        myKeyboard.addEventListener(yellow);
+
+        KeyboardEvent pink = new KeyboardEvent();
+        pink.setKey(KeyboardEvent.KEY_9);
+        pink.setKeyboardEventType(KeyboardEventType.KEY_PRESSED);
+        myKeyboard.addEventListener(pink);
+
+        KeyboardEvent orange = new KeyboardEvent();
+        orange.setKey(KeyboardEvent.KEY_0);
+        orange.setKeyboardEventType(KeyboardEventType.KEY_PRESSED);
+        myKeyboard.addEventListener(orange);
+
         KeyboardEvent save = new KeyboardEvent();
         save.setKey(KeyboardEvent.KEY_S);
         save.setKeyboardEventType(KeyboardEventType.KEY_PRESSED);
@@ -94,13 +125,13 @@ public class MyKeyboard implements KeyboardHandler {
         load.setKey(KeyboardEvent.KEY_L);
         load.setKeyboardEventType(KeyboardEventType.KEY_PRESSED);
         myKeyboard.addEventListener(load);
-
     }
 
     // Triggering the methods that are mapped to their respective keys
     @Override
     public void keyPressed(KeyboardEvent keyboardEvent) {
         int key = keyboardEvent.getKey();
+        System.out.println(key);
         switch (key) {
             case 39 -> {
                 if (pressed) {
@@ -142,18 +173,16 @@ public class MyKeyboard implements KeyboardHandler {
             case 83 -> {
                 try {
                     fileHelper.save();
-                    System.out.println("SAVE");
                 } catch (IOException e) {
-                    throw new RuntimeException(e);
+                    System.err.println("Failed to save the file: " + e.getMessage());
                 }
             }
 
             case 76 -> {
                 try {
                     fileHelper.load();
-                    System.out.println("LOAD");
                 } catch (IOException e) {
-                    throw new RuntimeException(e);
+                    System.err.println("Failed to load the file: " + e.getMessage());
                 }
             }
 
@@ -161,6 +190,12 @@ public class MyKeyboard implements KeyboardHandler {
             case 49 -> cursor.setColor(Color.GREEN);
             case 50 -> cursor.setColor(Color.BLUE);
             case 51 -> cursor.setColor(Color.RED);
+            case 54 -> cursor.setColor(Color.GRAY);
+            case 53 -> cursor.setColor(Color.CYAN);
+            case 55 -> cursor.setColor(Color.MAGENTA);
+            case 56 -> cursor.setColor(Color.YELLOW);
+            case 57 -> cursor.setColor(Color.PINK);
+            case 48 -> cursor.setColor(Color.ORANGE);
         }
     }
     @Override
