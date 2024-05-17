@@ -125,13 +125,17 @@ public class MyKeyboard implements KeyboardHandler {
         load.setKey(KeyboardEvent.KEY_L);
         load.setKeyboardEventType(KeyboardEventType.KEY_PRESSED);
         myKeyboard.addEventListener(load);
+
+        KeyboardEvent quit = new KeyboardEvent();
+        quit.setKey(KeyboardEvent.KEY_Q);
+        quit.setKeyboardEventType(KeyboardEventType.KEY_PRESSED);
+        myKeyboard.addEventListener(quit);
     }
 
     // Triggering the methods that are mapped to their respective keys
     @Override
     public void keyPressed(KeyboardEvent keyboardEvent) {
         int key = keyboardEvent.getKey();
-        System.out.println(key);
         switch (key) {
             case 39 -> {
                 if (pressed) {
@@ -183,6 +187,14 @@ public class MyKeyboard implements KeyboardHandler {
                     fileHelper.load();
                 } catch (IOException e) {
                     System.err.println("Failed to load the file: " + e.getMessage());
+                }
+            }
+
+            case 81 -> {
+                try {
+                    fileHelper.quit();
+                } catch (IOException e) {
+                    System.err.println("Failed to save the file: " + e.getMessage());
                 }
             }
 

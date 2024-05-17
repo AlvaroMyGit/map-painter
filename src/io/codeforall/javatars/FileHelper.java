@@ -139,4 +139,10 @@ public class FileHelper {
         }
 
     }
+
+    // Just a method to quit the program, but before it asks you to save the current grid if the user wants
+    public void quit() throws IOException {
+        save();
+        System.exit(0);
+    }
 }

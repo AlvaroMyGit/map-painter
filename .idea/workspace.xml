@@ -6,14 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="73942518-528e-4136-b281-53f943b0c18f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MapEditor/io/codeforall/javatars/Cursor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MapEditor/io/codeforall/javatars/Cursor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MapEditor/io/codeforall/javatars/FileHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MapEditor/io/codeforall/javatars/FileHelper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MapEditor/io/codeforall/javatars/Grid.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MapEditor/io/codeforall/javatars/Grid.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MapEditor/io/codeforall/javatars/MyKeyboard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MapEditor/io/codeforall/javatars/MyKeyboard.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MapEditor/io/codeforall/javatars/MyRectangle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MapEditor/io/codeforall/javatars/MyRectangle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/codeforall/javatars/Cursor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/codeforall/javatars/Cursor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/io/codeforall/javatars/FileHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/codeforall/javatars/FileHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/codeforall/javatars/Grid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/codeforall/javatars/Grid.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/io/codeforall/javatars/MyKeyboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/codeforall/javatars/MyKeyboard.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

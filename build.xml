@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+<project name="MapEditor" default="jarfile">
+
+    <!-- Initialize build properties  -->
+    <target name="init" description="Initializes properties">
+        <property name="project.name" value="MapEditor" />
+        <property name="src.dir" value="src" />
+        <property name="main.class" value="io.codeforall.javatars.Main" />
+        <property name="build.dir" value="build" />
+        <property name="classes.dir" value="${build.dir}/classes" />
+        <property name="lib.dir" value="lib" />
+    </target>
+
+
+
+    <!-- Creates the build directories to hold JAR file -->
+    <target name="prepare" description="Creates the build and classes directories" depends="init">
+        <mkdir dir="${classes.dir}" />
+    </target>
+
+    <!-- Removes the build directory -->
+    <target name="clean" description="Clean up project" depends="init">
+        <delete dir="${build.dir}" />
+    </target>
+
+    <!-- Compiles the source code -->
+    <target name="compile" description="Compiles the source code" depends="prepare">
+        <javac srcdir="${src.dir}" destdir="${classes.dir}" includeantruntime="false">
+            <classpath>
+                <pathelement location="${lib.dir}/simple-graphics-0.2.1-SNAPSHOT.jar"/>
+            </classpath>
+        </javac>
+    </target>
+
+    <!-- Creates a JAR file -->
+    <target name="jarfile" description="Archives the code" depends="compile">
+        <manifestclasspath property="jar.classpath" jarfile="${build.dir}/${project.name}.jar">
+            <classpath>
+                <pathelement location="${lib.dir}/simple-graphics-0.2.1-SNAPSHOT.jar"/>
+            </classpath>
+        </manifestclasspath>
+        <jar destfile="${build.dir}/${project.name}.jar" basedir="${classes.dir}">
+            <manifest>
+                <attribute name="Main-Class" value="${main.class}" />
+                <attribute name="Class-Path" value="${jar.classpath}" />
+            </manifest>
+        </jar>
+    </target>
+
+</project>
