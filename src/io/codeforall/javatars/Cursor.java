@@ -55,8 +55,8 @@ public class Cursor {
         }
     }
 
-    // This method is responsible for painting and erasing painted squares based on the condition if
-    // It is already painted or not
+    // This method is responsible for painting and erasing painted squares based
+    // on the condition if it is already painted or not
     protected void paintErase() {
 
         MyRectangle selectedRectangle = rect[cursor.getY() / myGrid.CELL_SIZE][cursor.getX() / myGrid.CELL_SIZE];

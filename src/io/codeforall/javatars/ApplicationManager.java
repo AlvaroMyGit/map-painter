@@ -57,6 +57,12 @@ public class ApplicationManager {
             File selectedFile = fileChooser.getSelectedFile();
             String fileName = selectedFile.getAbsolutePath();
 
+            // Check if the file name has a ".txt" extension
+            if (!fileName.toLowerCase().endsWith(".txt")) {
+                // If not, append ".txt" to the file name
+                fileName += ".txt";
+            }
+
             FileWriter writer = new FileWriter(fileName);
             for (int row = 0; row < ROWS; row++) {
                 for (int col = 0; col < COLS; col++) {

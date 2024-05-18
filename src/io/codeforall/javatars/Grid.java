@@ -37,7 +37,7 @@ public class Grid {
         for (int i = 0; i < rect.length; i++) {
             for (int j = 0; j < rect.length; j++) {
                 rect[i][j] = new MyRectangle(x, y, CELL_SIZE, CELL_SIZE);
-                rect[i][j].rectangleDraw(Color.WHITE);
+                rect[i][j].rectangleDraw();
                 x += CELL_SIZE;
             }
             x = PADDING;
