@@ -1,9 +1,9 @@
 <?xml version="1.0" ?>
-<project name="MapEditor" default="jarfile">
+<project name="MapPainter" default="jarfile">
 
     <!-- Initialize build properties  -->
     <target name="init" description="Initializes properties">
-        <property name="project.name" value="MapEditor"/>
+        <property name="project.name" value="MapPainter"/>
         <property name="src.dir" value="src"/>
         <property name="main.class" value="io.codeforall.javatars.Main"/>
         <property name="build.dir" value="build"/>

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/MapEditor.iml" filepath="$PROJECT_DIR$/MapEditor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MapPainter.iml" filepath="$PROJECT_DIR$/MapPainter.iml" />
     </modules>
   </component>
 </project>
