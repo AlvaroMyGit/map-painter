@@ -109,12 +109,22 @@ public class ApplicationManager {
         }
     }
 
-    // Just a method to quit the program, but before it quits asks the user to save the current grid
+    // Method to quit the program, gives the user some options
     public void quit() throws IOException {
-        int choice = JOptionPane.showConfirmDialog(null, "Are you sure you want to quit?", "Quit", JOptionPane.YES_NO_OPTION);
-        if (choice == JOptionPane.YES_OPTION) {
-            save();
-            System.exit(0);
+
+        int choice = JOptionPane.showConfirmDialog(null, "Do you want to save before quitting?", "Quit", JOptionPane.YES_NO_CANCEL_OPTION);
+
+        switch (choice) {
+            case JOptionPane.YES_OPTION:
+                save();
+                System.exit(0);
+                break;
+            case JOptionPane.NO_OPTION:
+                System.exit(0);
+                break;
+            default:
+                // If the user chooses Cancel, do nothing
+                break;
         }
     }
 }
