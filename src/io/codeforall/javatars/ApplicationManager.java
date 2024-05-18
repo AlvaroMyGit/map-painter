@@ -13,6 +13,8 @@ public class ApplicationManager {
     private final Grid GRID;
     private final int COLS;
     private final int ROWS;
+
+    // Maps needed for save() and load()
     private final Map<String, Color> codeToColor = new HashMap<>();
     private final Map<Color, String> colorToCode = new HashMap<>();
 
@@ -60,11 +62,9 @@ public class ApplicationManager {
                 for (int col = 0; col < COLS; col++) {
                     Color color = GRID.getRect()[col][row].getColor();
                     String code = colorToCode.getOrDefault(color, "n");
-                    writer.write(code + (col < COLS - 1 ? "," : "")); // Avoid trailing comma
-                    System.out.print(code + " "); // Debug
+                    writer.write(code + (col < COLS - 1 ? "," : ""));
                 }
                 writer.write("\n");
-                System.out.println(); // Debug
             }
             writer.close();
         }
