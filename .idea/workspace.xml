@@ -5,9 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="73942518-528e-4136-b281-53f943b0c18f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/ant.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/codeforall/javatars/FileHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/codeforall/javatars/FileHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/MapEditor.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/MapEditor.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/io/codeforall/javatars/FileHelper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/io/codeforall/javatars/Grid.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/io/codeforall/javatars/Grid.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/io/codeforall/javatars/MyKeyboard.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/io/codeforall/javatars/MyKeyboard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/io/codeforall/javatars/MyRectangle.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/io/codeforall/javatars/MyRectangle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MapEditor/io/codeforall/javatars/FileHelper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MapEditor/io/codeforall/javatars/Grid.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MapEditor/io/codeforall/javatars/Grid.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MapEditor/io/codeforall/javatars/MyKeyboard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MapEditor/io/codeforall/javatars/MyKeyboard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MapEditor/io/codeforall/javatars/MyRectangle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MapEditor/io/codeforall/javatars/MyRectangle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/codeforall/javatars/Cursor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/codeforall/javatars/Cursor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/codeforall/javatars/FileHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/codeforall/javatars/ApplicationManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/codeforall/javatars/Grid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/codeforall/javatars/Grid.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/io/codeforall/javatars/MyKeyboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/codeforall/javatars/MyKeyboard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/codeforall/javatars/MyRectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/codeforall/javatars/MyRectangle.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,17 +48,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Álvaro/Documents/MapEditor&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Álvaro/Documents/MapEditor",
+    "run.code.analysis.last.selected.profile": "pProject Default"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="io.codeforall.javatars.Main" />

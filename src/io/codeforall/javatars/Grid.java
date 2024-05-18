@@ -1,5 +1,7 @@
 package io.codeforall.javatars;
 
+import org.academiadecodigo.simplegraphics.graphics.Color;
+
 public class Grid {
 
     protected final int CELL_SIZE = 20;
@@ -15,7 +17,7 @@ public class Grid {
         this.col = col;
         rect = new MyRectangle[col][row];
         cursor = new Cursor(this);
-        myKeyboard = new MyKeyboard(this, cursor, new FileHelper(this));
+        myKeyboard = new MyKeyboard(this, cursor, new ApplicationManager(this));
         start();
     }
 
@@ -35,7 +37,7 @@ public class Grid {
         for (int i = 0; i < rect.length; i++) {
             for (int j = 0; j < rect.length; j++) {
                 rect[i][j] = new MyRectangle(x, y, CELL_SIZE, CELL_SIZE);
-                rect[i][j].rectangleDraw();
+                rect[i][j].rectangleDraw(Color.WHITE);
                 x += CELL_SIZE;
             }
             x = PADDING;
@@ -53,6 +55,8 @@ public class Grid {
             }
         }
     }
+
+    // Getters
     public MyRectangle[][] getRect() {
         return rect;
     }

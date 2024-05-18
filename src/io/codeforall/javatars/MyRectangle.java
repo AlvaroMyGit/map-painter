@@ -44,10 +44,14 @@ public class MyRectangle {
     }
 
     // Basically a wrapper so I can use this method on MyRectangle type of Object
-    public void rectangleDraw() {
+    public void rectangleDraw(Color color) {
+        this.color = color;
         rectangle.draw();
     }
 
+    public void rectangleDraw() {
+        rectangle.draw();
+    }
 
     public Color getColor() {
         return color;

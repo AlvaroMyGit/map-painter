@@ -70,7 +70,7 @@ public class Cursor {
         selectedRectangle.setPainted(false);
     }
 
-    // Changes the color of the cursor, after it changes the color deletes the previous cursor/color
+    // Changes the color of the cursor, after the color is changed deletes the previous cursor/color
     // And redraws the new one in the position of the previous one
     public void setColor(Color color) {
         this.color = color;

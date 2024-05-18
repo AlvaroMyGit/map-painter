@@ -19,12 +19,12 @@ public class MyKeyboard implements KeyboardHandler {
 
     protected Grid grid;
 
-    protected FileHelper fileHelper;
+    protected ApplicationManager applicationManager;
 
-    public MyKeyboard(Grid grid, Cursor cursor, FileHelper fileHelper) {
+    public MyKeyboard(Grid grid, Cursor cursor, ApplicationManager applicationManager) {
         this.grid = grid;
         this.cursor = cursor;
-        this.fileHelper = fileHelper;
+        this.applicationManager = applicationManager;
     }
 
 
@@ -176,7 +176,7 @@ public class MyKeyboard implements KeyboardHandler {
             case 67 -> grid.clear();
             case 83 -> {
                 try {
-                    fileHelper.save();
+                    applicationManager.save();
                 } catch (IOException e) {
                     System.err.println("Failed to save the file: " + e.getMessage());
                 }
@@ -184,7 +184,7 @@ public class MyKeyboard implements KeyboardHandler {
 
             case 76 -> {
                 try {
-                    fileHelper.load();
+                    applicationManager.load();
                 } catch (IOException e) {
                     System.err.println("Failed to load the file: " + e.getMessage());
                 }
@@ -192,7 +192,7 @@ public class MyKeyboard implements KeyboardHandler {
 
             case 81 -> {
                 try {
-                    fileHelper.quit();
+                    applicationManager.quit();
                 } catch (IOException e) {
                     System.err.println("Failed to save the file: " + e.getMessage());
                 }
