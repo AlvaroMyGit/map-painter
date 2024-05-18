@@ -13,12 +13,7 @@ public class ApplicationManager {
     private final Grid GRID;
     private final int COLS;
     private final int ROWS;
-
-    private MyRectangle rect;
-
-    // Map to map color codes to colors
     private final Map<String, Color> codeToColor = new HashMap<>();
-    // Map to map colors to color codes
     private final Map<Color, String> colorToCode = new HashMap<>();
 
     public ApplicationManager(Grid grid) {
@@ -26,7 +21,7 @@ public class ApplicationManager {
         this.COLS = grid.getCol();
         this.ROWS = grid.getRow();
 
-        // Initialize the color mappings
+
         initColorMappings();
     }
 
