@@ -12,7 +12,7 @@ public class Cursor {
 
     public Cursor(Grid myGrid) {
         this.myGrid = myGrid;
-        this.rect = myGrid.getRect();
+        this.rect = myGrid.getGrid();
         this.color = Color.BLACK;
     }
 
@@ -78,6 +78,7 @@ public class Cursor {
         reDrawCursor();
     }
 
+    // Getter
     public Color getColor() {
         return this.color;
     }

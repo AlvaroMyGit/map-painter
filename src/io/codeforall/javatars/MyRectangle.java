@@ -5,8 +5,6 @@ import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 
 public class MyRectangle {
 
-
-
     protected boolean isPainted;
 
     protected Rectangle rectangle;
@@ -21,12 +19,6 @@ public class MyRectangle {
     // This is the way we keep track of which squares are painted
     public void setPainted(boolean painted) {
         this.isPainted = painted;
-    }
-
-    // Returns the value of isPainted, this is the way we check if it is painted or not
-    // We use it in the paintErase() to decide if we paint it or if we erase it
-    public boolean isPainted() {
-        return isPainted;
     }
 
     // The method we use to paint the squares
@@ -48,6 +40,13 @@ public class MyRectangle {
         rectangle.draw();
     }
 
+    // Returns the value of isPainted, this is the way we check if it is painted or not
+    // We use it in the paintErase() to decide if we paint it or if we erase it
+    public boolean isPainted() {
+        return isPainted;
+    }
+
+    // Getter
     public Color getColor() {
         return color;
     }

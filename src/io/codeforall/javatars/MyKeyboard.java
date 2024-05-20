@@ -11,7 +11,7 @@ import java.io.IOException;
 public class MyKeyboard implements KeyboardHandler {
 
 
-    protected Keyboard myKeyboard = new Keyboard(this);
+    protected Keyboard myKeyboard;
 
     protected Cursor cursor;
 
@@ -25,6 +25,7 @@ public class MyKeyboard implements KeyboardHandler {
         this.grid = grid;
         this.cursor = cursor;
         this.applicationManager = applicationManager;
+        this.myKeyboard = new Keyboard(this);
     }
 
 

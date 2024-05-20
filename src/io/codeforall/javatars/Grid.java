@@ -1,21 +1,19 @@
 package io.codeforall.javatars;
 
-import org.academiadecodigo.simplegraphics.graphics.Color;
-
 public class Grid {
 
     protected final int CELL_SIZE = 20;
     protected final int PADDING = 10;
     protected int row;
     protected int col;
-    protected MyRectangle[][] rect;
+    protected MyRectangle[][] grid;
     protected Cursor cursor;
     protected MyKeyboard myKeyboard;
 
     public Grid(int col, int row) {
         this.row = row;
         this.col = col;
-        rect = new MyRectangle[col][row];
+        grid = new MyRectangle[col][row];
         cursor = new Cursor(this);
         myKeyboard = new MyKeyboard(this, cursor, new ApplicationManager(this));
         start();
@@ -34,10 +32,10 @@ public class Grid {
     protected void drawGrid() {
         int x = PADDING;
         int y = PADDING;
-        for (int i = 0; i < rect.length; i++) {
-            for (int j = 0; j < rect.length; j++) {
-                rect[i][j] = new MyRectangle(x, y, CELL_SIZE, CELL_SIZE);
-                rect[i][j].rectangleDraw();
+        for (int i = 0; i < grid.length; i++) {
+            for (int j = 0; j < grid.length; j++) {
+                grid[i][j] = new MyRectangle(x, y, CELL_SIZE, CELL_SIZE);
+                grid[i][j].rectangleDraw();
                 x += CELL_SIZE;
             }
             x = PADDING;
@@ -47,18 +45,18 @@ public class Grid {
 
     // Resets all squares on the grid back to unpainted mode
     public void clear() {
-        for (int i = 0; i < rect.length; i++) {
-            for (int j = 0; j < rect.length; j++) {
-                if (rect[i][j].isPainted()){
-                    rect[i][j].rectangleDelete();
+        for (int i = 0; i < grid.length; i++) {
+            for (int j = 0; j < grid.length; j++) {
+                if (grid[i][j].isPainted()){
+                    grid[i][j].rectangleDelete();
                 }
             }
         }
     }
 
     // Getters
-    public MyRectangle[][] getRect() {
-        return rect;
+    public MyRectangle[][] getGrid() {
+        return grid;
     }
     public int getRow() {
         return row;

@@ -57,16 +57,16 @@ public class ApplicationManager {
             File selectedFile = fileChooser.getSelectedFile();
             String fileName = selectedFile.getAbsolutePath();
 
-            // Check if the file name has a ".txt" extension
+            // Ensure the filename ends with .txt extension
             if (!fileName.toLowerCase().endsWith(".txt")) {
-                // If not, append ".txt" to the file name
                 fileName += ".txt";
             }
 
+            // Write the grid state to the file
             FileWriter writer = new FileWriter(fileName);
             for (int row = 0; row < ROWS; row++) {
                 for (int col = 0; col < COLS; col++) {
-                    Color color = GRID.getRect()[col][row].getColor();
+                    Color color = GRID.getGrid()[col][row].getColor();
                     String code = colorToCode.getOrDefault(color, "n");
                     writer.write(code + (col < COLS - 1 ? "," : ""));
                 }
@@ -103,10 +103,10 @@ public class ApplicationManager {
                     Color color = codeToColor.getOrDefault(code, Color.WHITE);
                     if (code.equals("n")) {
                         // Draw a rectangle with default color for unpainted squares
-                        GRID.getRect()[col][row].rectangleDraw();
+                        GRID.getGrid()[col][row].rectangleDraw();
                     } else {
                         // Draw the rectangle with the color
-                        GRID.getRect()[col][row].rectangleFill(color);
+                        GRID.getGrid()[col][row].rectangleFill(color);
                     }
                 }
                 row++;
